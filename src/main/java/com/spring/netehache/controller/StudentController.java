@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.netehache.domain.Student;
-import com.spring.netehache.service.RestService;
+import com.spring.netehache.service.StudentService;
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping(path = "/v1")
-public class RestController {
+public class StudentController {
 
 	@Autowired
-	private RestService restService;
+	private StudentService studentService;
 
-	@GetMapping(path = "/check", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public Student check(@RequestHeader String transactionId, @RequestBody Student student) {
+	@GetMapping(path = "/getDetails", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public Student getDetails(@RequestHeader String transactionId, @RequestBody Student student) {
 
-		return restService.getDetails(student);
+		return studentService.getDetails(student);
 	}
 
 }

@@ -1,2 +1,2 @@
 # com-spring-net-ehcache
-Setting up EhCache via Spring Bean Configuration 
+Setting up Net EhCache via Spring Bean Configuration 
